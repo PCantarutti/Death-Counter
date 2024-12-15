@@ -161,3 +161,35 @@ h1 {
     color: red;
     font-family: "Playfair Display", serif;
 }
+
+@media(max-width: 1080px) {
+    .sidebar {
+        position: absolute;
+        height: 20%;
+        width: 100vw;
+    }
+
+    .sidebar h2{
+        padding: 10px 10px 20px 10px;
+    }
+
+    .content {
+        gap: 30px;
+        padding-top: 60%;
+    } 
+
+    .capa__jogo {
+        width: 250px;
+        height: 250px;
+    }
+
+    .modal-content h1 {
+        font-size: 50px;
+    }
+
+    .inicio {
+        padding: 60% 10px 10px 10px;
+        margin-left: 0%;
+        width: 100vw;
+    }
+}
