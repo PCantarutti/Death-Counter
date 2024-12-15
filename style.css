@@ -39,14 +39,8 @@ h1 {
     scale: 1.02;
 }
 
-#btn_edit {
+.btn_edit {
     cursor: not-allowed;
-}
-
-main iframe {
-    margin-left: 250px;
-    height: 99vh;
-    width: 74vw;
 }
 
 .inicio {
