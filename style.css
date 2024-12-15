@@ -21,7 +21,7 @@ h1 {
     color: black;
 }
 
-#btn_morte {
+.btn_morte {
     color: rgb(255, 255, 255);
     width: 300px;
     padding: 15px 10px;
@@ -35,7 +35,7 @@ h1 {
     transition: scale 100ms;
 }
 
-#btn_morte:hover {
+.btn_morte:hover {
     scale: 1.02;
 }
 
