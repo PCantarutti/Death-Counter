@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 *, 
 *:after,
 *:before {
@@ -12,14 +14,33 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #eeeeee;
 }
 
 h1 {
     color: black;
 }
 
-.btn_morte {
-    color: rgb(153, 51, 51);
+#btn_morte {
+    color: rgb(255, 255, 255);
+    width: 300px;
+    padding: 15px 10px;
+    font-size: 50px;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    border: none;
+    background-color: rgb(255, 49, 49);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: scale 100ms;
+}
+
+#btn_morte:hover {
+    scale: 1.02;
+}
+
+#btn_edit {
+    cursor: not-allowed;
 }
 
 main iframe {
@@ -46,9 +67,11 @@ main iframe {
 }
 
 .sidebar h2{
-    padding: 20px 20px 70px 20px;
+    padding: 20px 10px 70px 10px;
     text-align: center;
     font-size: 32px;
+    font-family: "Playfair Display", serif;
+    text-transform: uppercase;
 }
 
 .sidebar img {
@@ -94,6 +117,8 @@ main iframe {
 }
 
 .content .contador {
+    font-size: 70px;
+    font-family: "Playfair Display", serif;
     text-align: center;
 }
 
@@ -105,4 +130,40 @@ main iframe {
     height: 500px;
     border-radius: 10%;
     box-shadow: 5px 5px 10px #606060, -5px -5px 10px #909090;
+}
+
+
+/* tela de morte */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.modal.mostrar {
+    opacity: 1;
+}
+
+.modal-content {
+    padding: 50px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, 0));
+    width: 100vw;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content h1 {
+    font-size: 150px;
+    color: red;
+    font-family: "Playfair Display", serif;
 }

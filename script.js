@@ -1,6 +1,10 @@
 const jogos = recuperarMortes();
 const mortes = document.querySelector('.contador');
 
+let telaMorte = document.querySelector(".modal");
+let textoMorte = document.querySelector(".modal-content h1");
+const palavras = ["GIT GUD", "GIT GUD", "GIT GUD", "GIT GUD", "GIT GUD", "HESITATION IS DEFEAT", "AGAIN??", "ARE YOU EVEN TRYING?", "TRY DODGE", "ATTACK HIM NEXT TIME", "TRY SOMETHING ELSE", "YOU SUCK", "KKKKKKKKKKKKKKKK KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK KKKKKKKKKKKKKKKK KKKKKKKKKKKKKKKKKKK", "TRY HARDER", "GIVE UP", "I LOVE MALENIA", "YOU FAILED", '"B" TO ROLL', "HERE WE GO AGAIN", "LOL", "OUT OF HEALS?", "CURSE YOU BAYLE!!!", "PRAISE THE SUN!", "SKILL ISSUE", "NOOB", "DRINK WATER", "I SHIT MYSELF", "WANT EASY MODE?", "I'M DISAPPOINTED"];
+
 const botaoMorte = document.getElementById('btn_morte');
 botaoMorte.addEventListener('click', adicionarMorte);
 
@@ -14,7 +18,21 @@ if (jogoSelecionado) {
 
 // função para adicionar mortes ao contador do dicionario e mostrar na tela 
 function adicionarMorte() {
+    let numero = Math.floor(Math.random() * palavras.length);
+    let radomizer = Math.floor(Math.random() * 100);
+
     botaoMorte.disabled = true;
+    telaMorte.style.display = "flex";
+
+    if (radomizer > 80) {
+        textoMorte.innerText = palavras[numero];
+    } else {
+        textoMorte.innerText = "YOU DIED";
+    }
+
+    setTimeout(() => {
+        telaMorte.classList.add('mostrar');
+    }, 1);
 
     jogos[jogoSelecionado.toString()] += 1;
     // console.log(jogos);
@@ -23,8 +41,13 @@ function adicionarMorte() {
     // console.log(jogos[jogoSelecionado.toString()])
 
     setTimeout(() => {
-        botaoMorte.disabled = false;
+        telaMorte.classList.remove('mostrar');
     }, 5000);
+
+    setTimeout(() => {
+        botaoMorte.disabled = false;
+        telaMorte.style.display = "none";
+    }, 7000);
 }
 
 // Função para recuperar as mortes do Local Storage
