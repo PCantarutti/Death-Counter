@@ -55,7 +55,7 @@ main iframe {
     width: 70px;
 }
 
-.sidebar a {
+.sidebar .itens {
     display: block;
     color: white;
     text-decoration: none;
@@ -65,14 +65,11 @@ main iframe {
 
 .sidebar .voltar_inicio {
     padding: 0;
+    text-decoration: none;
+    color: white;
 }
 
-.sidebar .voltar_inicio:hover {
-    padding: 0;
-    background-color: #333;
-}
-
-.sidebar a:hover {
+.sidebar .itens:hover {
     background-color: #575757;
 }
 
