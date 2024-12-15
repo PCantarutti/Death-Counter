@@ -63,6 +63,15 @@ main iframe {
     transition: background-color 0.3s;
 }
 
+.sidebar .voltar_inicio {
+    padding: 0;
+}
+
+.sidebar .voltar_inicio:hover {
+    padding: 0;
+    background-color: #333;
+}
+
 .sidebar a:hover {
     background-color: #575757;
 }
