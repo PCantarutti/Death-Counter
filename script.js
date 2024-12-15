@@ -24,7 +24,7 @@ function adicionarMorte() {
     botaoMorte.disabled = true;
     telaMorte.style.display = "flex";
 
-    if (radomizer > 80) {
+    if (radomizer > 65) {
         textoMorte.innerText = palavras[numero];
     } else {
         textoMorte.innerText = "YOU DIED";
